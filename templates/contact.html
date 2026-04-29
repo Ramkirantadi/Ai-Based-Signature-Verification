@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container" style="max-width:900px;">
+
+  <!-- ── Page Header ───────────────────────────────────── -->
+  <div class="page-header">
+    <span class="section-label">
+      <i class="bi bi-envelope-fill"></i> Contact Support
+    </span>
+    <h1 class="page-title">Get in Touch</h1>
+    <p class="page-desc">
+      Have questions, feedback, or collaboration ideas? Reach out to our team anytime.
+    </p>
+  </div>
+
+  <!-- ── Contact Card ───────────────────────────────────── -->
+  <div class="card-pro" style="padding:30px;">
+
+    <div class="row g-4">
+
+      <!-- Left Side -->
+      <div class="col-md-5">
+        <h4 style="font-weight:700;">Contact Information</h4>
+        <p style="color:var(--text-secondary); margin-bottom:20px;">
+          We’re happy to help you with any queries related to the project.
+        </p>
+
+        <div class="d-flex align-items-center mb-3">
+          <i class="bi bi-envelope-fill me-2" style="color:#2563eb;"></i>
+          <span>deepsignsecure@gmail.com</span>
+        </div>
+
+        <div class="d-flex align-items-center mb-3">
+          <i class="bi bi-telephone-fill me-2" style="color:#059669;"></i>
+          <span>+91 9876543210</span>
+        </div>
+
+        <div class="d-flex align-items-center">
+          <i class="bi bi-geo-alt-fill me-2" style="color:#dc2626;"></i>
+          <span>Andhra Pradesh, India</span>
+        </div>
+      </div>
+
+      <!-- Right Side (Form) -->
+      <div class="col-md-7">
+
+        <form action="/contact" method="POST">
+
+          <div class="field-group mb-3">
+            <label class="field-label">Your Name</label>
+            <input type="text" name="name" class="field-input" placeholder="Enter your name" required>
+          </div>
+
+          <div class="field-group mb-3">
+            <label class="field-label">Email Address</label>
+            <input type="email" name="email" class="field-input" placeholder="Enter your email" required>
+          </div>
+
+          <div class="field-group mb-3">
+            <label class="field-label">Message</label>
+            <textarea name="message" rows="4" class="field-input" placeholder="Write your message..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-analyze">
+            <i class="bi bi-send-fill me-1"></i>
+            Send Message
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}
